@@ -28,14 +28,14 @@ int main(int argc, char **argv)
 	{
 		std::string output_str = argv[3];
 		int files_folder = mkdir("files", 0777); // create files folder if doesn't exist
-		std::ofstream new_file("files\\" + file_name + ".txt"); // create new file
+		std::ofstream new_file("files/" + file_name + ".txt"); // create new file
 		new_file << "Hello from " + output_str;
 		new_file.close();
 	}
 	else if (command == "read")
 	{
 		std::fstream file;
-		file.open("files\\" + file_name + ".txt", std::ios::in);
+		file.open("files/" + file_name + ".txt", std::ios::in);
 		if (!file) // if the require file doesn't exist
 		{
 			std::cout << "No such file";
