@@ -2,7 +2,7 @@
 
 ### Queston1
 #### task 1:
-push_back has linear time complexity when reallocations happens, so it's less effective to put it in for loop. So, I improved fill_vector by using iota function which its time complexity is linear in the distance between first and last. 
+push_back has linear time complexity when reallocations happens, so it's less effective to put it in for loop. I improved fill_vector by using iota function which its time complexity is linear in the distance between first and last. 
 In addition, I improved vecOfvec.push_back by creating the vector from fill_vector only once and then push it to vecOfvec 10 times as requested.
 #### task 2:
 To implement count_total_elements without "visible" for loop, I used for_each function. for_each calls sumSizeVector which sums up each vector's size to a global variable called "sum".
